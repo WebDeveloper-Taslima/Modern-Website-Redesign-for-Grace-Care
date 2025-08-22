@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grace Care – NDIS Disability Support Provider | Community, Independence, Compassion</title>
+  <meta name="description" content="Grace Care is an NDIS disability support provider in Australia. We offer person-centred supports: community access, daily living, in-home care, SIL/Respite, and transport. Compassionate, inclusive, and trusted." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Grace Care – NDIS Disability Support" />
+  <meta property="og:description" content="Person‑centred NDIS supports that build independence, connection, and choice." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1513057071141-63db23e39e9a?q=80&w=1600&auto=format&fit=crop" />
+  <meta property="og:url" content="https://grace-care.com.au" />
+  <link rel="canonical" href="https://grace-care.com.au/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"] },
+          colors: {
+            brand: {
+              50: '#eef7f6',
+              100: '#d5efed',
+              200: '#aee0db',
+              300: '#77c9c2',
+              400: '#47b1a9',
+              500: '#21948d', /* primary (warm teal) */
+              600: '#1b7772',
+              700: '#165f5b',
+              800: '#124b48',
+              900: '#0f3d3b'
+            },
+            ink: {
+              50: '#f7f7f8',
+              700: '#334155',
+              800: '#1f2937',
+              900: '#0f172a'
+            },
+            accent: '#fbbf24' /* friendly amber for CTAs */
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.06)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Focus styles for accessibility */
+    :focus-visible { outline: 3px solid #47b1a9; outline-offset: 2px; }
+  </style>
+  
+  <!-- JSON-LD: Organization + Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Grace Care",
+    "url": "https://grace-care.com.au/",
+    "logo": "https://grace-care.com.au/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/",
+      "https://www.linkedin.com/"
+    ],
+    "description": "NDIS disability support provider delivering person-centred services across Australia.",
+    "areaServed": "AU",
+    "brand": {
+      "@type": "Brand",
+      "name": "Grace Care"
+    },
+    "makesOffer": [{
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Community Access & Social Participation",
+        "provider": {"@type": "Organization", "name": "Grace Care"}
+      }
+    },{
+      "@type": "Offer",
+      "itemOffered": {"@type": "Service", "name": "Daily Living & In‑Home Supports"}
+    },{
+      "@type": "Offer",
+      "itemOffered": {"@type": "Service", "name": "Supported Independent Living (SIL) & Respite"}
+    },{
+      "@type": "Offer",
+      "itemOffered": {"@type": "Service", "name": "Travel & Transport Assistance"}
+    }]
+  }
+  </script>
+</head>
+<body class="bg-white text-ink-800 selection:bg-brand-200">
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only absolute left-4 top-4 z-50 bg-white px-3 py-2 rounded shadow-soft">Skip to content</a>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3" aria-label="Grace Care Home">
+          <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=200&auto=format&fit=crop" alt="Grace Care abstract logo" class="w-9 h-9 rounded-xl object-cover" />
+          <span class="font-semibold text-lg tracking-tight">Grace Care</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm" aria-label="Primary">
+          <a href="#services" class="hover:text-brand-600">Services</a>
+          <a href="#about" class="hover:text-brand-600">About</a>
+          <a href="#ndis" class="hover:text-brand-600">NDIS</a>
+          <a href="#testimonials" class="hover:text-brand-600">Stories</a>
+          <a href="#faq" class="hover:text-brand-600">FAQ</a>
+          <a href="#contact" class="hover:text-brand-600">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center rounded-2xl bg-brand-500 px-4 py-2 text-white font-medium shadow-soft hover:bg-brand-600 focus-visible:outline-none">Get Support</a>
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-ink-50" aria-label="Toggle menu" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100 bg-white" role="dialog" aria-modal="true">
+      <div class="px-4 py-4 flex flex-col gap-3 text-sm">
+        <a href="#services" class="py-2">Services</a>
+        <a href="#about" class="py-2">About</a>
+        <a href="#ndis" class="py-2">NDIS</a>
+        <a href="#testimonials" class="py-2">Stories</a>
+        <a href="#faq" class="py-2">FAQ</a>
+        <a href="#contact" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="absolute inset-0 -z-10">
+      <img src="img/img.jpg" alt="Support worker with participant enjoying a community outing" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-tr from-white via-white/70 to-transparent"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="py-20 md:py-28 lg:py-32">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand-100 text-brand-700 px-3 py-1 text-xs font-medium">NDIS Registered Provider</span>
+          <h1 class="mt-4 text-4xl md:text-5xl font-bold leading-tight tracking-tight text-ink-900">Person‑centred NDIS supports that build <span class="text-brand-600">independence</span>, connection, and choice.</h1>
+          <p class="mt-4 text-lg text-ink-700">We provide flexible, culturally safe, and inclusive support across the community—no medical vibes, just real people helping real people.</p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-2xl bg-brand-500 px-5 py-3 text-white font-semibold hover:bg-brand-600 shadow-soft">Start your support</a>
+            <a href="#services" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 px-5 py-3 bg-white font-semibold hover:border-brand-300">See services</a>
+          </div>
+          <div class="mt-6 flex items-center gap-6 text-sm text-ink-700">
+            <div class="flex items-center gap-2"><span aria-hidden="true">★</span> Trusted by families</div>
+            <div class="flex items-center gap-2"><span aria-hidden="true">✓</span> Staff with valid checks</div>
+            <div class="flex items-center gap-2"><span aria-hidden="true">🕑</span> Flexible scheduling</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <main id="main">
+  <section id="services" class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">How we support you</h2>
+        <p class="mt-3 text-ink-700">Practical, everyday supports designed around your goals—not a hospital, not a clinic. Just life, made easier.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="rounded-2xl border border-slate-200 overflow-hidden shadow-soft bg-white">
+          <img src="img/img1.jpg" alt="Two friends enjoying a walk in the park with support worker" class="h-44 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Community Access & Social Participation</h3>
+            <p class="mt-2 text-sm text-ink-700">Outings, hobbies, events, volunteering—confidence and connection with the right support.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-ink-700">
+              <li>Appointments and errands</li>
+              <li>Sports, arts, and clubs</li>
+              <li>Skill‑building in the community</li>
+            </ul>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="rounded-2xl border border-slate-200 overflow-hidden shadow-soft bg-white">
+          <img src="img/img2.jpg" alt="Support worker assisting with meal prep at home" class="h-44 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Daily Living & In‑Home Support</h3>
+            <p class="mt-2 text-sm text-ink-700">Respectful help with the rhythms of home and health—on your terms.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-ink-700">
+              <li>Meal prep and household tasks</li>
+              <li>Personal care with dignity</li>
+              <li>Routines and independence</li>
+            </ul>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="rounded-2xl border border-slate-200 overflow-hidden shadow-soft bg-white">
+          <img src="img/img3.jpg" alt="Participant relaxing in a comfortable living space" class="h-44 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">SIL, Respite & Short‑Term Accommodation</h3>
+            <p class="mt-2 text-sm text-ink-700">Safe, supportive places to live or take a breather—staffed by people who care.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-ink-700">
+              <li>24/7 or drop‑in support</li>
+              <li>Skill development at home</li>
+              <li>Transitions and respite</li>
+            </ul>
+          </div>
+        </article>
+        <!-- Card 4 -->
+        <article class="rounded-2xl border border-slate-200 overflow-hidden shadow-soft bg-white">
+          <img src="img/img4.jpg" alt="Accessible transport helping someone into a vehicle" class="h-44 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Travel & Transport</h3>
+            <p class="mt-2 text-sm text-ink-700">From A to B with reliability—appointments, study, work, and social life.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-ink-700">
+              <li>Door‑to‑door assistance</li>
+              <li>Public transport support</li>
+              <li>Community activities</li>
+            </ul>
+          </div>
+        </article>
+        <!-- Card 5 -->
+        <article class="rounded-2xl border border-slate-200 overflow-hidden shadow-soft bg-white">
+          <img src="img/img5.jpg" alt="Young adult using a tablet with a support worker nearby" class="h-44 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Capacity Building</h3>
+            <p class="mt-2 text-sm text-ink-700">Learn skills that stick—budgeting, digital literacy, cooking, and more.</p>
+          </div>
+        </article>
+        <!-- Card 6 -->
+        <article class="rounded-2xl border border-slate-200 overflow-hidden shadow-soft bg-white">
+          <img src="img/img6.jpg" alt="Friendly team meeting at a community hub" class="h-44 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Support Coordination</h3>
+            <p class="mt-2 text-sm text-ink-700">Make your plan work for you—navigate providers, budgets, and reporting with clarity.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 md:py-24 bg-ink-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <img style="height:500px;width:500px;" src="img/img7.jpg" alt="Support worker high‑fiving participant after achieving a goal" class="rounded-3xl shadow-soft object-cover" />
+      </div>
+      <div>
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">About Grace Care</h2>
+        <p class="mt-4 text-ink-700">We’re a values‑led disability support team guided by compassion, choice, and cultural safety. Our staff are trained, vetted, and matched by interest—not just rosters. No lab coats, no medical jargon.</p>
+        <dl class="mt-6 grid sm:grid-cols-2 gap-6">
+          <div class="rounded-2xl bg-white p-5 border border-slate-200">
+            <dt class="font-medium">Person‑centred</dt>
+            <dd class="text-sm text-ink-700 mt-2">Supports designed around your goals and routine.</dd>
+          </div>
+          <div class="rounded-2xl bg-white p-5 border border-slate-200">
+            <dt class="font-medium">Quality & Safety</dt>
+            <dd class="text-sm text-ink-700 mt-2">Worker screening, NDIS compliance, and transparent reporting.</dd>
+          </div>
+          <div class="rounded-2xl bg-white p-5 border border-slate-200">
+            <dt class="font-medium">Inclusive</dt>
+            <dd class="text-sm text-ink-700 mt-2">LGBTIQA+, CALD, and First Nations respectful practice.</dd>
+          </div>
+          <div class="rounded-2xl bg-white p-5 border border-slate-200">
+            <dt class="font-medium">Reliable</dt>
+            <dd class="text-sm text-ink-700 mt-2">Clear communication and flexible scheduling.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- NDIS Section -->
+  <section id="ndis" class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Navigating the NDIS—made simple</h2>
+        <p class="mt-4 text-ink-700">Whether self‑managed, plan‑managed, or NDIA‑managed, we help you understand categories, book supports, and make the most of your funding.</p>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+          <li class="rounded-2xl border border-slate-200 p-4 bg-white">Choice & Control</li>
+          <li class="rounded-2xl border border-slate-200 p-4 bg-white">Easy scheduling</li>
+          <li class="rounded-2xl border border-slate-200 p-4 bg-white">Clear reporting</li>
+          <li class="rounded-2xl border border-slate-200 p-4 bg-white">Collaborate with your team</li>
+        </ul>
+        <a href="#contact" class="mt-6 inline-flex items-center rounded-2xl bg-ink-900 text-white px-5 py-3 font-semibold hover:bg-ink-800">Talk to a coordinator</a>
+      </div>
+      <div>
+        <img style="height: 300px;width: 500px;" src="img/img8.jpg" alt="Friendly conversation at a kitchen table, planning supports together" class="rounded-3xl shadow-soft object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16 md:py-24 bg-ink-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Stories from our community</h2>
+        <p class="mt-3 text-ink-700">Honest words from participants and families (names changed for privacy).</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <figure class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft">
+          <blockquote class="text-ink-800">“Grace Care helped my daughter try new things and meet new friends—without pressure.”</blockquote>
+          <figcaption class="mt-4 text-sm text-ink-700">— A., Parent</figcaption>
+        </figure>
+        <figure class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft">
+          <blockquote class="text-ink-800">“The team turn up on time and communicate. Life is calmer now.”</blockquote>
+          <figcaption class="mt-4 text-sm text-ink-700">— J., Participant</figcaption>
+        </figure>
+        <figure class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft">
+          <blockquote class="text-ink-800">“They respected our culture and routines from day one.”</blockquote>
+          <figcaption class="mt-4 text-sm text-ink-700">— S., Carer</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA strip -->
+  <section class="py-10 bg-gradient-to-r from-brand-500 to-brand-700 text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <h3 class="text-2xl font-semibold">Ready to start with Grace Care?</h3>
+      <a href="#contact" class="inline-flex items-center rounded-2xl bg-white text-ink-900 px-5 py-3 font-semibold hover:bg-brand-100">Make an enquiry</a>
+    </div>
+  </section>
+
+  <!-- FAQ (with tiny AI search) -->
+  <section id="faq" class="py-16 md:py-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Questions, answered</h2>
+        <p class="mt-3 text-ink-700">Type to search the FAQs. (This input can later connect to your AI assistant for smarter answers.)</p>
+      </div>
+      <div class="mt-6">
+        <label for="faqSearch" class="sr-only">Search FAQs</label>
+        <input id="faqSearch" type="search" placeholder="Search FAQs…" class="w-full rounded-2xl border border-slate-300 px-4 py-3" />
+      </div>
+      <div id="faqList" class="mt-8 grid gap-4">
+        <details class="rounded-2xl border border-slate-200 p-5 bg-white">
+          <summary class="font-medium cursor-pointer">Are you a medical service?</summary>
+          <p class="mt-2 text-sm text-ink-700">No. We are a disability support provider under the NDIS. We focus on daily living, community access, and independence—not medical treatment.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 p-5 bg-white">
+          <summary class="font-medium cursor-pointer">Do you work with plan‑managed participants?</summary>
+          <p class="mt-2 text-sm text-ink-700">Yes—we support self‑managed, plan‑managed, and NDIA‑managed participants.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 p-5 bg-white">
+          <summary class="font-medium cursor-pointer">How do I book supports?</summary>
+          <p class="mt-2 text-sm text-ink-700">Use the form below or call us. We’ll match supports to your goals and schedule.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 p-5 bg-white">
+          <summary class="font-medium cursor-pointer">What checks do your staff have?</summary>
+          <p class="mt-2 text-sm text-ink-700">All workers have appropriate screening, references, and ongoing training.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24 bg-ink-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Let’s plan your supports</h2>
+        <p class="mt-3 text-ink-700">Tell us about your goals and availability. We’ll get back to you within one business day.</p>
+        <div class="mt-6 rounded-3xl overflow-hidden border border-slate-200">
+          <img src="img/img9.jpg" alt="Smiling support worker and participant gardening together" class="w-full h-64 object-cover" />
+        </div>
+        <div class="mt-6 text-sm text-ink-700">
+          <p><strong>Phone:</strong> <a href="tel:+611300000000" class="hover:text-brand-600">1300 000 000</a></p>
+          <p><strong>Email:</strong> <a href="mailto:hello@grace-care.com.au" class="hover:text-brand-600">hello@grace-care.com.au</a></p>
+          <p><strong>Service area:</strong> Australia</p>
+        </div>
+      </div>
+      <form class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 shadow-soft" aria-label="Enquiry form" onsubmit="event.preventDefault(); document.getElementById('formMsg').classList.remove('hidden'); this.reset();">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-sm font-medium">Full name</label>
+            <input id="name" name="name" required class="mt-1 w-full rounded-2xl border border-slate-300 px-4 py-3" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input id="email" type="email" name="email" required class="mt-1 w-full rounded-2xl border border-slate-300 px-4 py-3" />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium">Phone</label>
+            <input id="phone" name="phone" class="mt-1 w-full rounded-2xl border border-slate-300 px-4 py-3" />
+          </div>
+          <div>
+            <label for="manage" class="block text-sm font-medium">NDIS management</label>
+            <select id="manage" name="manage" class="mt-1 w-full rounded-2xl border border-slate-300 px-4 py-3">
+              <option>Self‑managed</option>
+              <option>Plan‑managed</option>
+              <option>NDIA‑managed</option>
+            </select>
+          </div>
+          <div class="md:col-span-2">
+            <label for="message" class="block text-sm font-medium">Tell us about your goals</label>
+            <textarea id="message" name="message" rows="5" class="mt-1 w-full rounded-2xl border border-slate-300 px-4 py-3"></textarea>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center justify-between">
+          <label class="inline-flex items-center gap-2 text-sm"><input type="checkbox" class="rounded" required> I agree to the privacy policy</label>
+          <button type="submit" class="inline-flex items-center rounded-2xl bg-brand-500 px-5 py-3 text-white font-semibold hover:bg-brand-600">Send</button>
+        </div>
+        <p id="formMsg" class="hidden mt-4 text-sm text-green-700 bg-green-50 border border-green-200 rounded-xl p-3">Thanks! We’ve received your enquiry.</p>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-4 gap-8 text-sm">
+      <div class="md:col-span-2">
+        <a href="#" class="flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=200&auto=format&fit=crop" alt="Grace Care logo small" class="w-8 h-8 rounded-xl object-cover" />
+          <span class="font-semibold">Grace Care</span>
+        </a>
+        <p class="mt-3 text-ink-700 max-w-md">Disability support that feels human—community, independence, and compassion across Australia.</p>
+      </div>
+      <nav aria-label="Footer Services" class="grid grid-cols-2 gap-4">
+        <div>
+          <h4 class="font-semibold">Services</h4>
+          <ul class="mt-3 space-y-2">
+            <li><a href="#services" class="hover:text-brand-600">Community Access</a></li>
+            <li><a href="#services" class="hover:text-brand-600">Daily Living</a></li>
+            <li><a href="#services" class="hover:text-brand-600">SIL & Respite</a></li>
+            <li><a href="#services" class="hover:text-brand-600">Transport</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold">Company</h4>
+          <ul class="mt-3 space-y-2">
+            <li><a href="#about" class="hover:text-brand-600">About</a></li>
+            <li><a href="#ndis" class="hover:text-brand-600">NDIS</a></li>
+            <li><a href="#faq" class="hover:text-brand-600">FAQ</a></li>
+            <li><a href="#contact" class="hover:text-brand-600">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="bg-ink-900 text-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs">
+        <p>© <span id="year"></span> Grace Care. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:underline">Privacy</a>
+          <a href="#" class="hover:underline">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating AI chat launcher (placeholder) -->
+  <button id="chatBtn" aria-label="Open support chat" class="fixed bottom-5 right-5 rounded-full shadow-soft bg-brand-500 hover:bg-brand-600 text-white p-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z"/></svg>
+  </button>
+  <div id="chatBox" class="hidden fixed bottom-24 right-5 w-80 max-w-[92vw] rounded-2xl border border-slate-200 bg-white shadow-soft overflow-hidden">
+    <div class="px-4 py-3 bg-ink-900 text-white flex items-center justify-between">
+      <strong>Ask Grace</strong>
+      <button aria-label="Close chat" onclick="toggleChat(false)">✕</button>
+    </div>
+    <div class="p-4 max-h-80 overflow-auto text-sm" id="chatLog" aria-live="polite">
+      <p class="text-ink-700">Hi! I’m your assistant. Ask about services, pricing, or NDIS. (Connect me to your AI later.)</p>
+    </div>
+    <form class="border-t border-slate-200 p-2 flex items-center gap-2" onsubmit="event.preventDefault(); sendMsg();">
+      <label for="chatInput" class="sr-only">Message</label>
+      <input id="chatInput" class="flex-1 rounded-xl border border-slate-300 px-3 py-2" placeholder="Type your question…" />
+      <button class="rounded-xl bg-brand-500 text-white px-3 py-2">Send</button>
+    </form>
+  </div>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', (!open).toString());
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FAQ search (client-side; can be replaced by AI endpoint)
+    const faqSearch = document.getElementById('faqSearch');
+    const faqList = document.getElementById('faqList');
+    faqSearch?.addEventListener('input', () => {
+      const q = faqSearch.value.toLowerCase();
+      Array.from(faqList.querySelectorAll('details')).forEach(d => {
+        const txt = d.textContent.toLowerCase();
+        d.style.display = txt.includes(q) ? '' : 'none';
+      });
+    });
+
+    // Chat widget (placeholder)
+    const chatBtn = document.getElementById('chatBtn');
+    const chatBox = document.getElementById('chatBox');
+    const chatInput = document.getElementById('chatInput');
+    const chatLog = document.getElementById('chatLog');
+
+    function toggleChat(force) {
+      if (typeof force === 'boolean') {
+        chatBox.classList.toggle('hidden', !force);
+      } else {
+        chatBox.classList.toggle('hidden');
+      }
+      if (!chatBox.classList.contains('hidden')) chatInput?.focus();
+    }
+    chatBtn?.addEventListener('click', () => toggleChat());
+
+    function sendMsg(){
+      const msg = chatInput.value.trim();
+      if(!msg) return;
+      const p = document.createElement('p');
+      p.textContent = 'You: ' + msg;
+      chatLog.appendChild(p);
+      chatInput.value = '';
+      chatLog.scrollTop = chatLog.scrollHeight;
+      // Placeholder bot reply
+      setTimeout(() => {
+        const r = document.createElement('p');
+        r.textContent = 'Assistant: Thanks! We will connect this chat to an AI service (e.g., Azure OpenAI) for smart answers.';
+        chatLog.appendChild(r);
+        chatLog.scrollTop = chatLog.scrollHeight;
+      }, 400);
+    }
+  </script>
+</body>
+</html>
